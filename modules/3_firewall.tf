@@ -12,7 +12,7 @@ locals {
 }
 
 
-resource "google_compute_firewall" "allow-cabang" {
+resource "google_compute_firewall" "allow-branch" {
   for_each = {
     for index, fw in local.fw :
     fw.name => fw
